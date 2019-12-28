@@ -1,6 +1,9 @@
 ////
 //
-// Table sorter functionality.
+// SixArm.com JavaScript functions:
+// table sorter functionality.
+//
+// https://github.com/sixarm/sixarm_javascript_functions
 //
 // Modified and more readable version of the answer 
 // by Paul S. to sort a table with ASC and DESC order
