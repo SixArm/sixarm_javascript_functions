@@ -48,8 +48,8 @@ function vet(object) {
 //
 function vets(...objects) {
     objects.forEach(object => {
-        if !vet(object) return false;
-    }
+        if (!vet(object)) return false;
+    });
     return true;
 }
 
@@ -125,7 +125,7 @@ function vetAttribute(object, attributeName) {
 //
 function vetAttributes(x, ...attributeNames) {
     attributeNames.forEach(attributeName => {
-        if !vetAttribute(x, attributeName) return false;
+        if (!vetAttribute(x, attributeName)) return false;
     });
     return true;
 }
