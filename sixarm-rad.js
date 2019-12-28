@@ -1,6 +1,9 @@
 ////
 //
-// SixArm.com Rapid App Development (RAD) functions in JavaScript.
+// SixArm.com JavaScript functions:
+// Rapid App Development (RAD) utilties.
+//
+// https://github.com/sixarm/sixarm_javascript_functions
 //
 //   * These are intentionally simple, to be easy to learn and adjust.
 //

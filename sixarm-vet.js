@@ -1,6 +1,9 @@
 ////
 //
-// Vet functions a.k.a. validation functions.
+// SixArm.com JavaScript functions:
+// vet functions a.k.a. validation functions.
+//
+// https://github.com/sixarm/sixarm_javascript_functions
 //
 ////
 
