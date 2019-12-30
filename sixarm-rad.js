@@ -125,12 +125,22 @@ function elementsByClassName(className) {
 //
 ////
 
-function parseQueryString(queryString) {
-    var match;
-    let search = /([^&=]+)=?([^&]*)/g;
-    let decode = function (s) { return decodeURIComponent(s.replace(/\+/g, " ")); };
-    params = {};
-    while (match = search.exec(queryString))
-       params[decode(match[1])] = decode(match[2]);
-    return params;
+// Parse a URL string to its parameters, such as query string key-value items.
+// See https://stackoverflow.com/questions/901115/how-can-i-get-query-string-values-in-javascript
+function getURLParameters(b) {
+    var c = typeof b === "undefined";
+    if (a !== h && c) return a;
+    for (var d = {}, b = b || k[B][vb], e = b[p]("?"), f = b[p]("#"), b = (f === -1 ? b[Ya](e + 1) : [b[Ya](e + 1, f - e - 1), "&", b[Ya](f + 1)][K](""))[z]("&"), e = i.dd ? ia : unescape, f = 0, g = b[w]; f < g; ++f) {
+        var l = b[f][p]("=");
+        if (l !== -1) {
+            var q = b[f][I](0, l),
+                l = b[f][I](l + 1),
+                l = l[Ca](/\+/g, " ");
+            try {
+                d[q] = e(l)
+            } catch (A) {}
+        }
+    }
+    c && (a = d);
+    return d
 }
