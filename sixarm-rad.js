@@ -118,3 +118,19 @@ function elementById(id) {
 function elementsByClassName(className) {
     return document.getElementsByClassName(className);
 }
+
+////
+//
+// Browsing convenience functions
+//
+////
+
+function parseQueryString(queryString) {
+    var match;
+    let search = /([^&=]+)=?([^&]*)/g;
+    let decode = function (s) { return decodeURIComponent(s.replace(/\+/g, " ")); };
+    params = {};
+    while (match = search.exec(queryString))
+       params[decode(match[1])] = decode(match[2]);
+    return params;
+}
