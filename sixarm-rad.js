@@ -148,17 +148,17 @@ function parseQueryString(queryString) {
  * Parse a URL string to its parameters, such as query string key-value items.
  * See https://stackoverflow.com/questions/901115/how-can-i-get-query-string-values-in-javascript
  *
- * The code is thanks to Google. It is obfuscated, but it is understandable. 
+ * The code is thanks to Google. It is obfuscated, but it is understandable.
  * It does not work because some variables are undefined.
- * 
- * They start to look for parameters on the url from ? and also from the hash #. 
- * Then for each parameter they split in the equal sign b[f][p]("=") (which looks 
- * like indexOf, they use the position of the char to get the key/value). 
  *
- * Having it split they check whether the parameter has a value or not, if 
+ * They start to look for parameters on the url from ? and also from the hash #.
+ * Then for each parameter they split in the equal sign b[f][p]("=") (which looks
+ * like indexOf, they use the position of the char to get the key/value).
+ *
+ * Having it split they check whether the parameter has a value or not, if
  * it has then they store the value of d, otherwise they just continue.
  *
- * In the end the object d is returned, handling escaping and the + sign. 
+ * In the end the object d is returned, handling escaping and the + sign.
  * This object is just like mine, it has the same behavior.
  */
 function getURLParameters(b) {
@@ -177,4 +177,18 @@ function getURLParameters(b) {
     }
     c && (a = d);
     return d
+}
+
+////
+//
+// Comparison functions
+//
+////
+
+function cmp(a, b) {
+  return a == b ? 0 : a < b ? -1 : 1;
+}
+
+function cmp_random() {
+  return Math.random() < 0.5 ? -1 : 1;
 }
